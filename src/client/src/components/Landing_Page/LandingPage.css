@@ -1,0 +1,19 @@
+.landingpage{
+    background-color: black; 
+    height: 100vh;
+    width:100vw;
+}
+#lpimage{
+    height: 70vh;
+    width:50vw;
+    margin-left: 25vw;
+    margin-top: 4vh;
+}
+@media screen and (max-width:700px){
+   #lpimage{
+    width:90vw;
+    margin-top: 15vh;
+    margin-left:5vw;
+    height: 50vh;
+   }
+}

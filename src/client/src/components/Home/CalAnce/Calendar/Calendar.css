@@ -1,0 +1,19 @@
+.homeCalHead::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8px;
+  background-color: rgb(110, 120, 5);
+  border-radius: 5%/100%;
+}
+.homeCal {
+  width: 40%;
+}
+.homeCalCont {
+  width: 30rem;
+  /* height: 15rem;  */
+  background-color: orange;
+  padding-left: 7px;
+}

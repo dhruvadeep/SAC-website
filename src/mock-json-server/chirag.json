@@ -1,0 +1,159 @@
+{
+    "clubs":[
+        {
+            "name" : "Yacc",
+            "description" : "A dynamic and inclusive community of passionate coders and algorithmic thinkers. Our mission is to foster a deep and abiding love for coding, share knowledge , and provide platform for students to enhance their coding skills and take on real-world challenges.",
+            "ClubHeads" : "abc , abc",
+            "ClubLeads" : "abc",
+            "Clubemail" : "yacc@iitpkd.ac.in",
+            "ContactNo" : "1234556677",
+            "Joined" : "yes",
+            "image" : "yacc.jpg"
+        },
+        {
+            "name" : "Finance Club",
+            "description" : "A dynamic and inclusive community of passionate coders and algorithmic thinkers. Our mission is to foster a deep and abiding love for coding, share knowledge , and provide platform for students to enhance their coding skills and take on real-world challenges.",
+            "ClubHeads" : "abc , abc",
+            "ClubLeads" : "abc",
+            "Clubemail" : "yacc@iitpkd.ac.in",
+            "ContactNo" : "1234556677",
+            "Joined" : "no",
+            "image" : "financeclub.jpg"
+        },
+        {
+            "name" : "Horticulture Club",
+            "description" : "A dynamic and inclusive community of passionate coders and algorithmic thinkers. Our mission is to foster a deep and abiding love for coding, share knowledge , and provide platform for students to enhance their coding skills and take on real-world challenges.",
+            "ClubHeads" : "abc , abc",
+            "ClubLeads" : "abc",
+            "Clubemail" : "yacc@iitpkd.ac.in",
+            "ContactNo" : "1234556677",
+            "Joined" : "no",
+            "image" : "horticulture_logo.png"
+        },
+        {
+            "name" : "Curtain Call",
+            "description" : "A dynamic and inclusive community of passionate coders and algorithmic thinkers. Our mission is to foster a deep and abiding love for coding, share knowledge , and provide platform for students to enhance their coding skills and take on real-world challenges.",
+            "ClubHeads" : "abc , abc",
+            "ClubLeads" : "abc",
+            "Clubemail" : "yacc@iitpkd.ac.in",
+            "ContactNo" : "1234556677",
+            "Joined" : "yes",
+            "image" :  "curtaincall.png"
+        },
+        {
+            "name" : "EBSB",
+            "description" : "A dynamic and inclusive community of passionate coders and algorithmic thinkers. Our mission is to foster a deep and abiding love for coding, share knowledge , and provide platform for students to enhance their coding skills and take on real-world challenges.",
+            "ClubHeads" : "abc , abc",
+            "ClubLeads" : "abc",
+            "Clubemail" : "yacc@iitpkd.ac.in",
+            "ContactNo" : "1234556677",
+            "Joined" : "yes",
+            "image" : "ebsb.jpg"
+        },
+        {
+            "name" :"Akshar",
+            "description" : "A dynamic and inclusive community of passionate coders and algorithmic thinkers. Our mission is to foster a deep and abiding love for coding, share knowledge , and provide platform for students to enhance their coding skills and take on real-world challenges.",
+            "ClubHeads" : "abc , abc",
+            "ClubLeads" : "abc",
+            "Clubemail" : "yacc@iitpkd.ac.in",
+            "ContactNo" : "1234556677",
+            "Joined" : "yes",
+            "image" : "akshar.jpg"
+        },
+        {
+            "name" : "Bioscope",
+            "description" : "A dynamic and inclusive community of passionate coders and algorithmic thinkers. Our mission is to foster a deep and abiding love for coding, share knowledge , and provide platform for students to enhance their coding skills and take on real-world challenges.",
+            "ClubHeads" : "abc , abc",
+            "ClubLeads" : "abc",
+            "Clubemail" : "yacc@iitpkd.ac.in",
+            "ContactNo" : "1234556677",
+            "Joined" : "yes",
+            "image" : "bioscope.jpg"
+        }
+    ],
+    "completedprojects": [
+        {
+            "clubName" : "CLUB NAME",
+            "time" : "3 hrs ago" ,
+            "eventTitle" : "Project/Opportunity Title" ,
+            "content" : "Announcement/Event description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, quidem rem unde non aut perspiciatis in, facilis possimus distinctio labore consequatur quas quibusdam? Ut blanditiis possimus itaque voluptas ea sapiente.",
+            "status" : "Completed",
+            "Skill1" : "Python",
+            "Skill2" : "JavaScpt"
+    
+        },
+        {
+            "clubName" : "CLUB NAME",
+            "time" : "3 hrs ago" ,
+            "eventTitle" : "Project/Opportunity Title" ,
+            "content" : "Announcement/Event description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, quidem rem unde non aut perspiciatis in, facilis possimus distinctio labore consequatur quas quibusdam? Ut blanditiis possimus itaque voluptas ea sapiente.",
+            "status" : "Completed",
+            "Skill1" : "Python",
+            "Skill2" : "JavaScpt"
+        },
+        {
+           "clubName" : "CLUB NAME",
+            "time" : "3 hrs ago" ,
+            "eventTitle" : "Project/Opportunity Title" ,
+            "content" : "Announcement/Event description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, quidem rem unde non aut perspiciatis in, facilis possimus distinctio labore consequatur quas quibusdam? Ut blanditiis possimus itaque voluptas ea sapiente.",
+            "status" : "Completed",
+            "Skill1" : "Python",
+            "Skill2" : "JavaScpt"
+        }
+    ],
+    "ongoingprojects":[
+        {
+            "clubName" : "CLUB NAME",
+            "time" : "3 hrs ago" ,
+            "eventTitle" : "Project/Opportunity Title" ,
+            "content" : "Announcement/Event description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, quidem rem unde non aut perspiciatis in, facilis possimus distinctio labore consequatur quas quibusdam? Ut blanditiis possimus itaque voluptas ea sapiente.",
+            "status" : "Ongoing",
+            "Skill1" : "Python",
+            "Skill2" : "JavaScpt"
+    
+        },
+        {
+            "clubName" : "CLUB NAME",
+            "time" : "3 hrs ago" ,
+            "eventTitle" : "Project/Opportunity Title" ,
+            "content" : "Announcement/Event description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, quidem rem unde non aut perspiciatis in, facilis possimus distinctio labore consequatur quas quibusdam? Ut blanditiis possimus itaque voluptas ea sapiente.",
+            "status" : "Ongoing",
+            "Skill1" : "Python",
+            "Skill2" : "JavaScpt"
+        },
+        {
+           "clubName" : "CLUB NAME",
+            "time" : "3 hrs ago" ,
+            "eventTitle" : "Project/Opportunity Title" ,
+            "content" : "Announcement/Event description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, quidem rem unde non aut perspiciatis in, facilis possimus distinctio labore consequatur quas quibusdam? Ut blanditiis possimus itaque voluptas ea sapiente.",
+            "status" : "Ongoing",
+            "Skill1" : "Python",
+            "Skill2" : "JavaScpt"
+        }
+    ],
+    "DashAnct" : [
+        {
+            "img" : "iitlogo.jpg",
+            "heading" :"Lorem ipsum dolor sit amet "  ,
+            "time": "1 day ago"
+        },
+        {
+            "img" : "iitlogo.jpg",
+            "heading" :"Lorem ipsum dolor sit amet "  ,
+            "time": "1 day ago"
+        },
+        {
+            "img" : "iitlogo.jpg",
+            "heading" :"Lorem ipsum dolor sit amet "  ,
+            "time": "1 day ago"
+        },
+        {
+            "img" : "iitlogo.jpg",
+            "heading" :"Lorem ipsum dolor sit amet "  ,
+            "time": "1 day ago"
+        }
+    ],
+    "status":{
+        "clubs" : "5" , "events" : "10" , "ongoingProjects" : "6" , "hourlearning" : "3"
+    }
+}

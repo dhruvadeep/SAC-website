@@ -1,0 +1,42 @@
+.dash-left{
+    display: inline-flex;
+    flex-direction: column;
+}
+
+#navbarText{
+    margin-top: 3rem;
+}
+
+.leftHamburg{
+    display: none;
+}
+
+.closeLeftMenu{
+    display: none;
+}
+
+.lylist{
+    list-style: none;
+    font-size: 150%;
+    width: inherit;
+    padding: 1.5rem 2rem;
+}
+.lylistmid{
+    border-bottom:1px solid #e2dbdb;
+}
+.leftMenu{
+    width: 20rem;
+}
+
+@media screen and (max-width:1440px) {
+    .leftHamburg{
+        display: inline-flex;
+        margin: 0.5rem;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 0.5rem;
+    }
+    #navbarText{
+        margin-top: 0rem;
+    }
+}
