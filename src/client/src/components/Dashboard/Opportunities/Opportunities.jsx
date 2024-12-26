@@ -1,71 +1,37 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 import LayoutLeft from '../Layout/LayoutLeft/LayoutLeft'
 import LayoutRight from '../Layout/LayoutRight/LayoutRight'
 import { FaPlus } from "react-icons/fa";
 import OpportunityCard from './OpportunityCard';
 import NewProject from './NewProject';
+import axios from 'axios';
 
 const Opportunities = () => {
-    const completedprojects = [
-        {
-            clubName : "CLUB NAME",
-            time : '3 hrs ago' ,
-            eventTitle : 'Project/Opportunity Title' ,
-            content : 'Announcement/Event description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, quidem rem unde non aut perspiciatis in, facilis possimus distinctio labore consequatur quas quibusdam? Ut blanditiis possimus itaque voluptas ea sapiente.',
-            status : 'Completed',
-            Skill1 : "Python",
-            Skill2 : "JavaScpt"
-
-        },
-        {
-            clubName : "CLUB NAME",
-            time : '3 hrs ago' ,
-            eventTitle : 'Project/Opportunity Title' ,
-            content : 'Announcement/Event description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, quidem rem unde non aut perspiciatis in, facilis possimus distinctio labore consequatur quas quibusdam? Ut blanditiis possimus itaque voluptas ea sapiente.',
-            status : 'Completed',
-            Skill1 : "Python",
-            Skill2 : "JavaScpt"
-        },
-        {
-            clubName : "CLUB NAME",
-            time : '3 hrs ago' ,
-            eventTitle : 'Project/Opportunity Title' ,
-            content : 'Announcement/Event description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, quidem rem unde non aut perspiciatis in, facilis possimus distinctio labore consequatur quas quibusdam? Ut blanditiis possimus itaque voluptas ea sapiente.',
-            status : 'Completed',
-            Skill1 : "Python",
-            Skill2 : "JavaScpt"
+    const [nodisplay , setnodisplay] = useState(false);
+    const [completedprojects , setcompletedprojects] = useState([]);
+    const [ongoingprojects , setongoingprojects] = useState([])
+    useEffect(()=>{
+        axios.get('http://localhost:8000/completedprojects')
+        .then((response)=>{
+          setcompletedprojects(response.data)
         }
-    ]
-    const ongoingprojects = [
-        {
-            clubName : "CLUB NAME",
-            time : '3 hrs ago' ,
-            eventTitle : 'Project/Opportunity Title' ,
-            content : 'Announcement/Event description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, quidem rem unde non aut perspiciatis in, facilis possimus distinctio labore consequatur quas quibusdam? Ut blanditiis possimus itaque voluptas ea sapiente.',
-            status : 'Ongoing',
-            Skill1 : "Python",
-            Skill2 : "JavaScpt"
-
-        },
-        {
-            clubName : "CLUB NAME",
-            time : '3 hrs ago' ,
-            eventTitle : 'Project/Opportunity Title' ,
-            content : 'Announcement/Event description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, quidem rem unde non aut perspiciatis in, facilis possimus distinctio labore consequatur quas quibusdam? Ut blanditiis possimus itaque voluptas ea sapiente.',
-            status : 'Ongoing',
-            Skill1 : "Python",
-            Skill2 : "JavaScpt"
-        },
-        {
-            clubName : "CLUB NAME",
-            time : '3 hrs ago' ,
-            eventTitle : 'Project/Opportunity Title' ,
-            content : 'Announcement/Event description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, quidem rem unde non aut perspiciatis in, facilis possimus distinctio labore consequatur quas quibusdam? Ut blanditiis possimus itaque voluptas ea sapiente.',
-            status : 'Ongoing',
-            Skill1 : "Python",
-            Skill2 : "JavaScpt"
+        )
+        .catch((error)=>{
+          setnodisplay(true);
         }
-    ]
+        )
+      })
+    useEffect(()=>{
+        axios.get('http://localhost:8000/ongoingprojects')
+        .then((response)=>{
+        setongoingprojects(response.data)
+        }
+        )
+        .catch((error)=>{
+        console.log(error)
+        }
+        )
+    })
     const [option , setoption] = useState("none")
     const [task,settask] = useState('All')
     const [newproject , setnewproject] = useState(false)
@@ -108,6 +74,7 @@ const Opportunities = () => {
             <div style={{ width: '20rem' }}>
                 <LayoutLeft ele='oppor' />
             </div>
+            <div className='d-flex justify-content-center' style={{width:'calc(100% - 43rem)'}}>
             <div className='container' style={{ width:'46rem', height:"auto" , margin: '3rem 1rem', textAlign: 'justify' }}>
                 <div className='container'>
                     <h1>Opportunities / Projects
@@ -143,8 +110,12 @@ const Opportunities = () => {
                         <OpportunityCard clubName={element.clubName} time={element.time} eventTitle={element.eventTitle} content={element.content} status={element.status} Skill1={element.Skill1} Skill2={element.Skill2}/>
                     ))}
                 </div>
+                {
+                nodisplay && <div style={{fontSize:"1.3rem",marginLeft:"1rem",marginBottom:"1rem"}}> No Opportunities right now </div>
+                }
                 </div>}
-                {newproject && <NewProject/>}
+                {newproject && <NewProject newproject={newproject} projectform={projectform} ongoingprojects={ongoingprojects}/>}
+            </div>
             </div>
             <div style={{ width: '20rem' }}>
                 <LayoutRight />

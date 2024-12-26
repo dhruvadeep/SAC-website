@@ -15,6 +15,9 @@ const Layout = (props) => {
     let bclrlive = props.ele === 'live' ? 'rgb(243 130 33)' : 'rgb(250 199 170)';
     let bclropportunities = props.ele === 'oppor' ? 'rgb(243 130 33)' : 'rgb(250 199 170)';
     let bclrmore = props.ele === 'more' ? 'rgb(243 130 33)' : 'rgb(250 199 170)';
+    let bclrstatdat = props.ele === 'statdat' ? 'rgb(243 130 33)' : 'rgb(250 199 170)';
+    let bclrbudge = props.ele === 'budge' ? 'rgb(243 130 33)' : 'rgb(250 199 170)';
+    let bclrproj = props.ele === 'proj' ? 'rgb(243 130 33)' : 'rgb(250 199 170)';
 
     let isLeftVis = false;
 
@@ -83,16 +86,18 @@ const Layout = (props) => {
     }, []);
 
     return (
-        <div className='leftMenu' style={{ position: 'fixed', overflowY: 'auto', top: 0, bottom: 0, left: 0, right: 0, zIndex: '999' }}>
-            <div className='leftHamburg' onClick={() => displayLeftMenu()} style={{ position: 'absolute', top: 5,zIndex:'999' }} >
+        <div className='leftMenu' style={{ position: 'fixed', overflowY: 'auto', top: 0, bottom: 0, left: 0, right: 0, zIndex: '999', overflowY: 'scroll', scrollbarWidth: 'none', '-ms-overflow-style': 'none', overflow: '-moz-scrollbars-none' }}>
+            <div className='leftHamburg' onClick={() => displayLeftMenu()} style={{ position: 'absolute', top: 5, zIndex: '999' }} >
                 <FaBars size={40} />
             </div>
             <div className='dash-left' style={{ width: '20rem', left: '0' }}>
 
-                <div id="navbarText" style={{ paddingBottom: '1rem', width: 'inherit' }}>
-                    <span class="navbar-text active" style={{ color: 'black', fontSize: '140%', paddingLeft: '5rem' }}>
-                        Student Affairs Council
-                        <p style={{ fontSize: '58%', paddingLeft: '5rem' ,color:'Orange'}}>
+                <div className='d-flex flex-row align-items-center' id="navbarText" style={{ paddingBottom: '1rem', width: 'inherit', marginTop: '3rem' }}>
+                    <div style={{ backgroundImage: 'url(/iitlogo.jpg)', backgroundSize: 'contain', backgroundPosition: 'center', height: '5rem', width: '5rem', backgroundRepeat: 'no-repeat' }}>
+                    </div>
+                    <span class="navbar-text active" style={{ color: 'black', fontSize: '140%' }}>
+                        <p style={{ margin: '0' }}>Student Affairs Council</p>
+                        <p style={{ fontSize: '58%', color: 'Orange' }}>
                             Indian Institute of Technology Palakkad
                         </p>
                     </span>
@@ -145,12 +150,23 @@ const Layout = (props) => {
                             </li>
                         </Link>
 
-                        <Link className="dropdown-item" to="/more">
-                            <li className='dash-more lylist nav-item' style={{ backgroundColor: `${bclrmore}` }}>
-                                <HiDotsHorizontal size={35} style={{ margin: '0rem 0.8rem' }} />
-                                More
+                        <Link className="dropdown-item" to="/static-data" style={{ backgroundColor: `${bclrstatdat}` }}>
+                            <li className="dash-more lylist lylistmid nav-item" >
+                                Static Data
                             </li>
                         </Link>
+                        <Link className="dropdown-item" to="/budget-tracking" style={{ backgroundColor: `${bclrbudge}` }}>
+                            <li className="dash-more lylist lylistmid nav-item" >
+                                Budget Tracking
+                            </li>
+                        </Link>
+                        <Link className="dropdown-item" to="/project-approval" style={{ backgroundColor: `${bclrproj}` }}>
+                            <li className="dash-more lylist nav-item" >
+                                Project Approval
+                            </li>
+                        </Link>
+
+
 
                     </ul>
 

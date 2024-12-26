@@ -1,59 +1,37 @@
-import React from "react";
-import LayoutLeft from "../Layout/LayoutLeft/LayoutLeft";
-import LayoutRight from "../Layout/LayoutRight/LayoutRight";
-import MyClubs from "./components/MyClubs";
+import React , {useState , useEffect} from "react";
 import "./styles.css";
+import ClubPage from "./components/ClubPage";
+import axios from 'axios'
+import ClubList from "./components/ClubList";
 
 const Clubs = () => {
+  const [activeclub , setactiveclub] = useState(false);
+  const [clubname,setclubname] = useState("");
+  const onclicking = (element)=>{
+    setclubname(element);
+    setactiveclub(true);
+  }
+  const [clubdetails,setclubdetails] = useState([]);
+  useEffect(()=>{
+    axios.get('http://localhost:8000/clubs')
+    .then((response)=>{
+      setclubdetails(response.data)
+    }
+    )
+    .catch((error)=>{
+      console.log(error)
+    }
+    )
+  })
   return (
-    <div className="d-flex flex-row">
-      <div style={{ width: "20rem" }}>
-        <LayoutLeft ele="clubs" />
-      </div>
-      <div
-        className=""
-        style={{ width: "40rem", margin: "10rem 4rem", textAlign: "justify" }}
-      >
-        <div id="Clubs" className="clubs">
-          <h3>My Clubs</h3>
-          <div className="d-flex flex-column">
-            <div className="d-flex flex-row">
-              <MyClubs />
-              <MyClubs />
-              <MyClubs />
-            </div>
-            <div className="d-flex flex-row">
-              <MyClubs />
-              <MyClubs />
-              <MyClubs />
-            </div>
-          </div>
-        </div>
-
-        <div id="Clubs" className="clubs">
-          {/* button at start and other at end side */}
-          <div className="d-flex justify-content-between">
-            <h3>Explore Clubs</h3>
-            <button className="btn btn-primary">Explore More</button>
-          </div>
-          <div className="d-flex flex-column">
-            <div className="d-flex flex-row">
-              <MyClubs />
-              <MyClubs />
-              <MyClubs />
-            </div>
-            <div className="d-flex flex-row">
-              <MyClubs />
-              <MyClubs />
-              <MyClubs />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div style={{ width: "20rem" }}>
-        <LayoutRight />
-      </div>
-    </div>
+    <>
+    {!activeclub && <ClubList onclick = {onclicking}/>}
+    {activeclub &&  clubdetails.map(item=>{
+          if (item.name===clubname){
+            return <ClubPage setactiveclub={setactiveclub} name= {item.name} description = {item.description} ClubHeads = {item.ClubHeads} ClubLeads = {item.ClubLeads} Clubemail={item.Clubemail} ContactNo={item.ContactNo} Joined={item.Joined} image={item.image}/>
+          }
+        })}
+    </>
   );
 };
 

@@ -1,0 +1,9 @@
+@media (max-width: 426px) {
+    .card-body {
+        padding: 0rem 1rem !important; /* Adjust padding for smaller screens */
+    }
+}
+
+.form-label{
+    color: rgb(131, 130, 130);
+}

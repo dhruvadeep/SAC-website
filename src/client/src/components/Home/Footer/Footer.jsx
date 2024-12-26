@@ -5,18 +5,12 @@ import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
 const Footer = () => {
   return (
     <div className='footer p-3' style={{zIndex:'1'}}>
-      <div className='sac-text' style={{ paddingLeft: '2rem' }}>
-        <span style={{fontSize: '200%' }}>
-          Student Affairs Council
-          <p style={{ fontSize: '58%' }}>Indian Institute of Technology Palakkad</p>
-        </span>
-      </div>
       <div className='mid d-flex flex-row'>
         <div className='drct d-flex flex-column' style={{width:'50%',paddingLeft:'2rem',paddingTop:'2rem'}}>
-        <span>
-          <a href='#' className='d-flex' style={{ textDecoration: 'none',fontSize:'130%',color:'black'}}>Home</a>
-          <a href='#' className='d-flex' style={{ textDecoration: 'none',fontSize:'130%',color:'black'}}>Login</a>
-        </span>
+              <span style={{fontSize: '200%', marginBottom : '0rem' , marginLeft: '-2rem'}}>
+              Student Affairs Council
+              <p style={{ fontSize: '58%'}}>Indian Institute of Technology Palakkad</p>
+              </span>
         </div>
         <div className='adrs d-flex justify-content-end' style={{width:'50%',float:'right'}}>
           <span style={{fontSize: '150%' }}>

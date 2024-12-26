@@ -1,29 +1,25 @@
-export default function MyClubs() {
+export default function MyClubs(props) {
   return (
     <div>
       <div
         className="card"
         style={{
-          width: "18rem",
-          margin: "1rem",
+          width: "13rem",
+          height:"13rem",
+          marginRight: "1rem",
+          marginTop:"1rem"
         }}
       >
+        <button style={{border:"none"}} onClick={()=>{props.onclick(props.name)}}>
+
         <img
-          src="https://picsum.photos/150/150"
+          src={props.image}
           className="card-img-top"
           alt="My Image"
-          style={{ height: "150px", objectFit: "cover" }}
-        />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" className="btn btn-primary">
-            Go somewhere
-          </a>
-        </div>
+          style={{ objectFit: "cover" }}
+          />
+        </button>
+
       </div>
     </div>
   );

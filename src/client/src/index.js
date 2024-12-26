@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {Chart, ArcElement} from 'chart.js'
+Chart.register(ArcElement);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
